@@ -11,7 +11,6 @@
 
     <div class="container" id="container">
 
-      <!-- Sign Up Form (starts off-screen left) -->
       <div class="form-container sign-up">
         <div class="form-inner">
           <h1>Create Account</h1>
@@ -22,14 +21,28 @@
             <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
           </div>
           <span>or use your email for registration</span>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <button type="button">Sign Up</button>
+          <div class="input-group">
+            <input type="text" id="reg-name" placeholder=" " />
+            <label for="reg-name">Name</label>
+          </div>
+          <div class="input-group">
+            <input type="email" id="reg-email" placeholder=" " />
+            <label for="reg-email">Email</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="reg-password" placeholder=" " />
+            <label for="reg-password">Password</label>
+            <span class="toggle-pw" data-target="reg-password"><i class="fa-regular fa-eye"></i></span>
+          </div>
+          <div class="strength-bar"><div class="strength-fill"></div></div>
+          <span class="strength-text"></span>
+          <button type="button" id="signupBtn">
+            <span class="btn-text">Sign Up</span>
+            <span class="spinner"></span>
+          </button>
         </div>
       </div>
 
-      <!-- Sign In Form (starts visible on left) -->
       <div class="form-container sign-in">
         <div class="form-inner">
           <h1>Sign In</h1>
@@ -40,23 +53,30 @@
             <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
           </div>
           <span>or use your email and password</span>
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+          <div class="input-group">
+            <input type="email" id="login-email" placeholder=" " />
+            <label for="login-email">Email</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="login-password" placeholder=" " />
+            <label for="login-password">Password</label>
+            <span class="toggle-pw" data-target="login-password"><i class="fa-regular fa-eye"></i></span>
+          </div>
           <a href="#" class="forgot">Forgot your password?</a>
-          <button type="button">Sign In</button>
+          <button type="button" id="signinBtn">
+            <span class="btn-text">Sign In</span>
+            <span class="spinner"></span>
+          </button>
         </div>
       </div>
 
-      <!-- Purple Sliding Overlay -->
       <div class="toggle-container">
         <div class="toggle">
-          <!-- Left panel — shown when sign-up is active -->
           <div class="toggle-panel toggle-left">
             <h1>Welcome Back!</h1>
             <p>Enter your personal details to use all of the site features</p>
             <button type="button" id="loginBtn">Sign In</button>
           </div>
-          <!-- Right panel — shown by default -->
           <div class="toggle-panel toggle-right">
             <h1>Hello, Friend!</h1>
             <p>Register with your personal details to use all of the site features</p>
